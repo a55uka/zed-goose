@@ -7,4 +7,4 @@ set -e
 cd "$(dirname "$0")"
 rev=$(git rev-parse HEAD)
 sed -i "s|^rev = \".*\"|rev = \"$rev\"|" extension.toml
-git commit -m "Build the grammar from $(git rev-parse --short HEAD^)" extension.toml
+git commit -m "Build the grammar from $(git rev-parse --short "$rev")" extension.toml

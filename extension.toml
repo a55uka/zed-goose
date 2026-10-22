@@ -12,5 +12,5 @@ repository = "https://github.com/a55uka/zed-goose"
 # src/scanner.c), so `rev` must name a commit containing the wanted grammar.
 # Run ./update-grammar-rev after changing grammar/.
 repository = "https://github.com/a55uka/zed-goose"
-rev = "0000000000000000000000000000000000000000"
+rev = "b80656537a464f76c8b36a59ff6c681c7d5690f5"
 path = "grammar"
