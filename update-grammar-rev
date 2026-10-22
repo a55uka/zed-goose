@@ -1,0 +1,10 @@
+#!/bin/sh
+# Repoint [grammars.goose].rev in extension.toml at the current HEAD, which
+# must be a commit containing the grammar/ changes just committed. Zed clones
+# the repository at that commit to compile the parser, so run this after
+# every grammar/ change, then reinstall the dev extension in Zed.
+set -e
+cd "$(dirname "$0")"
+rev=$(git rev-parse HEAD)
+sed -i "s|^rev = \".*\"|rev = \"$rev\"|" extension.toml
+git commit -m "Build the grammar from $(git rev-parse --short HEAD^)" extension.toml

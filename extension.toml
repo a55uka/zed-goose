@@ -1,0 +1,16 @@
+id = "goose"
+name = "Goose"
+version = "0.1.0"
+schema_version = 1
+authors = ["Patrick Doane", "a55uka"]
+description = "Syntax highlighting for the Goose programming language."
+repository = "https://github.com/a55uka/zed-goose"
+
+[grammars.goose]
+# This extension carries its own grammar: Zed clones this repository at `rev`
+# and compiles the parser from the grammar/ subdirectory (src/parser.c plus
+# src/scanner.c), so `rev` must name a commit containing the wanted grammar.
+# Run ./update-grammar-rev after changing grammar/.
+repository = "https://github.com/a55uka/zed-goose"
+rev = "0000000000000000000000000000000000000000"
+path = "grammar"
